@@ -1,0 +1,46 @@
+<h2>Produtos</h2>
+<div *ngIf="!temProduto">
+    <p>não há produtos no carrinho</p>
+</div>
+<div *ngIf="temProduto" class="container">
+    <div class="box" *ngFor="let item of produtosSelecionados">
+        <div class="imagem">
+            <img src={{item.imagem}} alt="">
+        </div>
+        <div class="informacoes">
+            <p><strong>{{item.nome}}</strong></p>
+            <p><strong>Valor:</strong> {{item.valor | currency:'BRL'}}</p>
+            <div class="quantidade">
+                <button type="button">-</button>
+                <div>1</div>
+                <button type="button">+</button>
+                
+            </div>
+        </div>
+        <div class="butao">
+            <button type="button"  [routerLink]="['/produtos',item.id,item.nome]"> Mais informações</button>
+            <button type="button"  (click)="remover(item.id)">remover</button>
+        </div>
+    </div>
+    <div class="valor-total">
+        <p>Valor total:<span>{{valorTotal | currency: 'BRL'}}</span></p> 
+    </div>
+    <br>
+    <div class="login container">
+        <h2>Login:</h2>
+        <app-login></app-login>
+        <p>ou</p>
+        <button type="button" routerLink="cadastro"> Fazer cadastrou</button>
+    </div>
+    <br>
+    <div>
+        <button type="button" (click)="enviar()"> Concluir Compra</button>
+        
+    </div>
+    <div *ngIf="concluido">
+        <h3>Pedido concluido</h3>
+    </div>
+</div>
+
+
+

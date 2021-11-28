@@ -1,0 +1,99 @@
+p{
+    margin: 10px 0;
+}
+
+strong{
+    text-transform: capitalize;
+}
+
+.box{
+    height: 30vh;
+    width: 90%;
+    margin: 10px auto;
+    border: solid 2px #f58220;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.imagem{
+    border-right: dashed 1px #f58220;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem img{
+    height: 80%;
+    width: 80%;
+}
+
+.informacoes{
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.butao{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.butao button{
+    background-color: #f58220;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: solid 3px white;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 760px){
+    p{
+        width: 100%;
+    }
+    
+    .box{
+        flex-direction: column;
+        height: 450px;
+    }
+
+    .imagem{
+        height: 45%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: none;
+    }
+
+    .imagem img{
+        height: 95%;
+        width: 95%;
+    }
+    
+    .informacoes{
+        width: 100%;
+        height: 40%;
+        padding: 10px 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .butao{
+        height: 15%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .butao button{
+        height: 90%;
+    }
+
+}

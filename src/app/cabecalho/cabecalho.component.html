@@ -1,0 +1,13 @@
+<div class="topo-cabecalho">
+    <img src="/assets/img/logo/1.png" alt="">
+    <div class="butoes">
+        <button class="butao" type="button" (click)="logar()">Login</button>
+        <a routerLink="carrinho"><img src="/assets/img/icones/carrinho-de-compras.png" alt=""></a>
+    </div>
+</div>
+<div class="topo-cabecalho" *ngIf="login">
+    <app-login></app-login>
+</div>
+
+<app-carousel></app-carousel>
+<app-navbar></app-navbar>

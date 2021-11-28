@@ -1,27 +1,38 @@
-# CarrinhoDeCompras
+# Carrinho de compras
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+Projeto do curso Santander Coders | Web Full-Stack da Lets Code no qual é criado um carrinho de compras utilizando Angular. 
 
-## Development server
+Requisitos:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Página de visualização de anúncio, com fotos, descrição, preço e possibilidade de adicionar no carrinho;
 
-## Code scaffolding
+- Pagina de "checkout" com os dados sumarizados do pedido(os itens adicionados) e o valor total;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Requisitos funcionais para os 2 projetos:
 
-## Build
+  - Criação de rotas;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  - Criação de diretivas;
 
-## Running unit tests
+  - Persistência em Local storage/Uso de api;
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  - Utilização de forms.
 
-## Running end-to-end tests
+    
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Data de entrega: 28/11/21
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+#### Observações:
+
+​	Na data da entrega desse trabalho:
+
+  - O componente Login não está funcionando corretamente;
+
+  - A adição de um item no carrinho não leva em consideração se ele já existe lá, portanto não existe uma medição da quantidade de cada um nem a possibilidade da alteração disso;
+
+    
+
+
+

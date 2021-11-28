@@ -1,0 +1,20 @@
+<div *ngIf="!estado">
+    <div class="interior">
+        <label for="email">E-mail:</label>
+        <input #email type="email" id="email"  required>
+    </div>
+    <div class="interior">
+        <label for="senha">Senha:</label>
+        <input #senha type="senha" id="senha" required>
+    </div>
+    <div class="interior">
+        <button type="button" (click)="verificar(email.value,senha.value)">Logar</button>
+    </div>
+</div>
+
+<div *ngIf="estado">
+    <p>Logado</p>
+    <button type="button" (click)="deslogar()">Deslogar</button>
+</div>
+
+

@@ -1,0 +1,21 @@
+<div class="box">
+    <div class="superior">
+        <div class="imagem">
+            <img src={{produto.imagem}} alt="">
+        </div>
+        <div class="informacoes">
+            <p><strong>nome:</strong>{{produto.nome}}</p>
+            <p><strong>id:</strong>{{produto.id}}</p>
+            <p><strong>categoria:</strong>{{produto.categoria}}</p>
+            <p><strong *ngIf="produto.genero">gênero:</strong>{{produto.genero}}</p>
+            <p><strong>valor:</strong>{{produto.valor | currency:'BRL'}}</p>
+        </div>
+    </div>
+    <div class="inferior">
+        <p>{{produto.descricao}}Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aperiam obcaecati exercitationem vero eum ad animi adipisci modi rerum ut, repudiandae dicta! Explicabo, enim magni ipsam sed qui id veniam.</p>
+    </div>
+    <div class="butoes">
+        <button>Comprar</button>
+    </div>
+
+</div>

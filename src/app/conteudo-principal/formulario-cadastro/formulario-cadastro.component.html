@@ -1,0 +1,94 @@
+<form  [formGroup]="cadastrar" (ngSubmit)="enviar()">
+    <div class="externo">
+        <h2>Cadastro do cliente:</h2>
+        <p>*campos obrigatórios</p>
+    </div>
+    <div *ngIf="mesnsagemErro" class="externo erro">
+        <h3>E-mail já cadastrado</h3>
+    </div>
+    <div *ngIf="mesnsagemEnvio" class="externo erro">
+        <h3>Cadastro feito com sucesso</h3>
+    </div>
+    <div class="externo">
+        <div class="interno">
+            <label for="nome">*Nome:</label>
+            <input type="text" id="nome" formControlName="nome" required>
+        </div>
+        <div  *ngIf="nome?.invalid " >
+            <div *ngIf="nome?.errors?.['minlength']"><p>*O nome deve ter no mínimo 3 caracteres</p></div>
+        
+        </div>
+        <div class="interno">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" formControlName="sobrenome">
+        </div>
+    </div>
+    <div class="externo">
+        <div class="interno">
+            <label for="genero">Genero:</label>
+            <input type="text" id="genero" formControlName="genero">
+        </div>
+        <!-- <p>Gênero:</p>
+        <div class="interno">
+            <input type="radio" name="genero" value="masculino">
+            <label for="html">Masculino</label><br>
+            <input type="radio" name="genero" value="feminino">
+            <label for="css">Feminino</label><br>
+            <input type="radio" name="genero" value="outro">
+            <label for="javascript">Outro/Não declarar</label>    
+        </div> -->
+    </div>
+    <div class="externo">
+        <label for="email">*E-mail:</label>
+        <input type="email" id="email" formControlName="email" required>
+        <div  *ngIf="email?.invalid " >
+            <!-- <div *ngIf="email?.errors?.['icone']"><p>*O Formato de email deve conter os caracteres '@' e '.'</p></div> -->
+            <div *ngIf="email?.errors?.['email']"><p>*email já existente</p></div>
+        </div>
+    </div>
+    <div class="telefone externo">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" formControlName="telefone">
+    </div>
+    <div class="endereco externo">
+        <div class="rua interno">
+            <label for="rua">*Rua:</label>
+            <input type="text" id="rua" formControlName="rua" required>
+        </div>
+        <div class="numero interno">
+            <label for="numero">*Número:</label>
+            <input type="number" id="numero" formControlName="numero" required>
+        </div>
+        <div class="cidade interno">
+            <label for="cidade">*Cidade:</label>
+            <input type="text" id="cidade" formControlName="cidade" required>
+        </div>
+        <div class="estado internointerno">
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" formControlName="estado" >
+        </div>
+    </div>
+    <div class="externo">
+        <div class="interno">
+            <label for="senha">*Senha:</label>
+            <input type="text" id="senha" formControlName="senha" required>
+        </div>
+        <div  *ngIf="senha?.invalid " >
+                <div *ngIf="senha?.errors?.['minlength']"><p>*A senha deve ter no mínimo 6 caracteres</p></div>
+                <div *ngIf="senha?.errors?.['icone']"><p>*A senha deve conter um numero</p></div>
+        </div>
+        <!-- <div class="interno">
+            <label for="confirmar-senha">*Confirmar Senha:</label>
+            <input type="password" id="confirmar-senha" formControlName="confirmar-senha" required>
+        </div> -->
+        
+    </div>
+    <div class="butao">
+        <button type="submit" [disabled]="!cadastrar.valid">Enviar</button>
+    </div>
+    
+    
+    
+
+</form>
+

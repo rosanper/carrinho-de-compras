@@ -1,0 +1,22 @@
+.propaganda{
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.produto{
+    width: 90%;
+    margin: auto;
+}
+
+h2{
+    margin-left: 10px;
+    color: #f58220;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}

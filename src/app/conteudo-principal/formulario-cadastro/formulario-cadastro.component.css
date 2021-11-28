@@ -1,0 +1,66 @@
+input{
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.externo{
+    margin: 10px 20px;
+}
+
+.interno{
+    margin: 10px 0;
+}
+
+p{
+    margin: 0;
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f58220;
+}
+
+h2 h3{
+    font-weight: bolder;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+label{
+    font-family: 'Montserrat', sans-serif;
+}
+
+form{
+    width: 90%;
+    margin: 15px auto;
+    border: solid 2px #f58220;
+    border-radius: 15px;
+}
+
+.butao{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+button{
+    background-color: #f58220;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: solid 3px white;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    margin: auto;
+}
+
+.erro{
+    display: flex;
+    justify-content: center;
+    border: solid 2px #f58220;
+}
+
+@media screen and (max-width: 700px){
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+}

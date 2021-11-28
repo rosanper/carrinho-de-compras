@@ -1,0 +1,15 @@
+<div class="box" *ngFor="let item of listaProdutos">
+    <div class="imagem">
+        <img src={{item.imagem}} alt="">
+    </div>
+    <div class="informacoes">
+        <p><strong>{{item.nome}}</strong></p>
+        <p>{{item.descricao}}</p>
+        <p><strong>Valor:</strong> {{item.valor | currency:'BRL'}}</p>
+    </div>
+    <div class="butao">
+        <button type="button"  [routerLink]="['/produtos',item.id,item.nome]"> Mais informações</button>
+        <button type="button"  (click)="add(item.nome)">Comprar</button>
+    </div>
+</div>
+
